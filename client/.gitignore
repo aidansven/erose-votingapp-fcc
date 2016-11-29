@@ -10,6 +10,7 @@ coverage
 # build (included to commit for purpose of deployment to heroku)
 
 # misc
+.idea
 .DS_Store
 .env
 npm-debug.log
