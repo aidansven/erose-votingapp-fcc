@@ -7,7 +7,7 @@ node_modules
 coverage
 
 # production
-build
+# build (included to commit for purpose of deployment to heroku)
 
 # misc
 .DS_Store
