@@ -9,6 +9,10 @@
   "author": "Ethan Rose",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.14.0"
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.0",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1"
   }
 }

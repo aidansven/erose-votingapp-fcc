@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Yrsa');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
+
+body {
+  font-family: "Yrsa", serif;
+  background-color: azure;
+}
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+#content {
+  margin-left: 200px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Lato", sans-serif;
+  color: #393990;
+}
+#card {
+  width: 80%; height: auto;
+  margin: 30px auto;
+  padding: 50px;
+  background-color: white;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.btn {
+  background-color: dodgerblue;
+  width: auto;
+  padding: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 10px auto;
+  color: white;
+}
+.btn:hover {
+  background-color: cornflowerblue;
+}

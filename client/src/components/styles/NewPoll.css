@@ -1,0 +1,15 @@
+
+
+#new-option-btn {
+    display: inline-block;
+    margin: 5px;
+}
+#submit-poll-btn {
+    display: inline-block;
+    margin: 5px;
+}
+
+input {
+    display: block;
+    margin: 10px auto;
+}
