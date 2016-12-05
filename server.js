@@ -12,6 +12,9 @@ var mongoose = require('mongoose')
 mongoose.connect('mongodb://admin:admin@ds113608.mlab.com:13608/erose-votingapp-fcc')
 var Poll = require('./Schemas/Poll');
 
+//Authentication
+var passport = require('passport');
+
 //Middlewares
 app.use(bodyParser.json());
 
