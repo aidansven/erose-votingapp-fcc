@@ -25,7 +25,7 @@ var FacebookStrategy = require('passport-facebook').Strategy;
 passport.use(new FacebookStrategy({
 	clientID: "1141773389211867",
 	clientSecret: "48fc279938c0e7661516045e5f80e6d9",
-	callbackURL: "https://erose-votingapp-fcc.herokuapp.com/auth/facebook/callback"
+	callbackURL: "auth/facebook/callback"
 },
 	function(accessToken, refreshToken, profile, done){
 	console.log('noterr!')
@@ -61,7 +61,7 @@ passport.deserializeUser(function(id, done) {
 });
 
 app.get('/auth/facebook', passport.authenticate('facebook'));
-app.get('/auth/facebook/callback*',
+app.get('/auth/facebook/callback',
 	passport.authenticate('facebook', {successRedirect: '/',
 																			failureRedirect: '/login'
 																							}));
