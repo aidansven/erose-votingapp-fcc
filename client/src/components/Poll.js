@@ -20,7 +20,7 @@ class Poll extends Component {
 			chartData.push(newdata.options[i][1]);
 		}
 		this.setState({data: newdata});
-		
+		setTimeout(()=>$('.btn').css('display', 'none'), 1)
 		
 		//pass data to donut chart
 		var data = {

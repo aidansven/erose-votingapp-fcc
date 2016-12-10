@@ -16,13 +16,13 @@ class AllPolls extends Component {
 		})
 	}
 	render(){
-		return <div id="card">{this.state.content.map(function(d){
+		return <div id="card">{this.state.content.map(function(d, i){
 			return (
-				<Link to={'/' + d._id}><div id="question-box">
+				<Link to={'/' + d._id}><div id="question-box" key={i}>
 					<h4>{d.question}</h4><br />
 					<div id="options-box">
-						{d.options.map(function(o) {
-						return <div id="option"><div id="votes-num">{o[1]}</div>{o[0]}</div>
+						{d.options.map(function(o, i) {
+						return <div id="option" key={i}><div id="votes-num">{o[1]}</div>{o[0]}</div>
 					})}
 					</div>
 				</div></Link>

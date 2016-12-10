@@ -34,7 +34,6 @@ class NewPoll extends Component {
 		} else {
 			alert('Some fields are not correct')
 		}
-		
 	}
 	render(){
 		return (
