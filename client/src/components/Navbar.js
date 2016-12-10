@@ -4,13 +4,6 @@ import $ from 'jquery';
 import { Link } from 'react-router';
 
 class Navbar extends Component {
-	
-	handleLogin(){
-		$.get('/auth/facebook/callback', function(response){
-			console.log(response)
-		});
-	}
-	
 	componentDidMount(){
 	}
 	
@@ -39,9 +32,9 @@ class Navbar extends Component {
 				>
 					Profile
 				</div></Link>
-				<div id="fb-login" onClick={this.handleLogin}>
+				<a href="/auth/facebook"><div id="fb-login">
 					<i className="fa fa-facebook-square" /> Login
-				</div>
+				</div></a>
 			</div>
 			
 			<div id="content">

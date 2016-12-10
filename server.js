@@ -21,23 +21,11 @@ app.use(bodyParser.json());
 
 //Authentication
 var passport = require('passport');
-
-passport.serializeUser(function(user, done) {
-	done(null, user.id);
-});
-
-// used to deserialize the user
-passport.deserializeUser(function(id, done) {
-	User.findById(id, function(err, user) {
-		done(err, user);
-	});
-});
-
 var FacebookStrategy = require('passport-facebook').Strategy;
 passport.use(new FacebookStrategy({
 	clientID: "1141773389211867",
 	clientSecret: "48fc279938c0e7661516045e5f80e6d9",
-	callbackURL: "http://localhost:3001/auth/facebook/callback"
+	callbackURL: "/auth/facebook/callback"
 },
 	function(accessToken, refreshToken, profile, done){
 	console.log('noterr!')
@@ -61,7 +49,18 @@ passport.use(new FacebookStrategy({
 	})
 	}
 ))
+passport.serializeUser(function(user, done) {
+	done(null, user.id);
+});
 
+// used to deserialize the user
+passport.deserializeUser(function(id, done) {
+	User.findById(id, function(err, user) {
+		done(err, user);
+	});
+});
+
+app.get('/auth/facebook', passport.authenticate('facebook'));
 app.get('/auth/facebook/callback',
 	passport.authenticate('facebook', {successRedirect: '/',
 																			failureRedirect: '/login'
