@@ -25,7 +25,7 @@ var FacebookStrategy = require('passport-facebook').Strategy;
 passport.use(new FacebookStrategy({
 	clientID: "1141773389211867",
 	clientSecret: "48fc279938c0e7661516045e5f80e6d9",
-	callbackURL: "/auth/facebook/callback"
+	callbackURL: "https://erose-votingapp-fcc.herokuapp.com/auth/facebook/callback"
 },
 	function(accessToken, refreshToken, profile, done){
 	console.log('noterr!')
